@@ -1,5 +1,10 @@
 # Gridium
 
+### Prerequisites
+
+* python3
+* pip
+
 ### Installation
 
 ```sh
