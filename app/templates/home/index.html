@@ -9,6 +9,7 @@
       <th>Id</th>
       <th>Initial date</th>
       <th>Close date</th>
+      <th data-sorter="false">Source</th>
       <th class="text-right">Total usage (kWh)</th>
       <th class="text-right">Peak usage (kW)</th>
       <th class="text-right">Amount</th>
@@ -19,6 +20,10 @@
         <td>{{ bill['id'] }}</td>
         <td>{{ bill['attributes']['initial'] }}</td>
         <td>{{ bill['attributes']['closing'] }}</td>
+        <td>
+          <a href="#building-{{ bill['relationships']['building']['data']['id'] }}" id="building-{{ bill['relationships']['building']['data']['id'] }}">Building</a>
+          <a href="#meter-{{ bill['relationships']['meter']['data']['id'] }}" id="meter-{{ bill['relationships']['meter']['data']['id'] }}" class="pl-1">Meter</a>
+        </td>
         <td class="text-right">{{ bill['attributes']['used'] | int }}</td>
         <td class="text-right">{{ bill['attributes']['peak'] | int }}</td>
         <td class="text-right">$ {{ bill['attributes']['cost'] }}</td>
