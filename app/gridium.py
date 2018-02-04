@@ -9,11 +9,13 @@ app = Flask(__name__)
 
 
 def get_bills():
+    """Return all billing data from the API."""
     return requests.get(API_URL).json()
 
 
 @app.route('/')
 def home():
+    """Render the home page."""
     return render_template('home/index.html', bills=get_bills())
 
 

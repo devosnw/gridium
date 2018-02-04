@@ -3,10 +3,14 @@
 ### Installation
 
 ```sh
+git clone git@github.com:devosnw/gridium.git
+cd gridium/
+
 # not required but recommended to do inside a virtual environment
-python3 -m venv venv
+mkdir venv/
+python3 -m venv venv/
 source venv/bin/activate
-# install all project dependencies
+
 make install
 ```
 

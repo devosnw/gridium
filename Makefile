@@ -1,5 +1,6 @@
 # gridium makefile
 
+.DEFAULT_GOAL := test
 TEST_OPTS =
 
 .PHONY: clean install test
