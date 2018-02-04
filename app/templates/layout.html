@@ -6,10 +6,21 @@
   <title>Gridium</title>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.29.5/css/theme.bootstrap_4.min.css" integrity="sha384-6zZCzmoWfgzR8UJfV4/czubWrITb3gPY0jQwp5j6lxERFDHw5hjCdEmBoLVaDUTy" crossorigin="anonymous">
 </head>
 <body>
   <div class="container pt-2 pb-2">
     {% block content %}{% endblock %}
   </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.29.5/js/jquery.tablesorter.min.js" integrity="sha384-hCuW11qVGtDNxfwpKIBnfZclwRLaMrmnn5IQ0HtYwRZaESSeUOJpQmFQg0q3PlkQ" crossorigin="anonymous"></script>
+  <script type="text/javascript">
+  $(function() {
+    $('[data-tablesorter]').tablesorter({
+      theme : 'bootstrap'
+    });
+  });
+  </script>
 </body>
 </html>
