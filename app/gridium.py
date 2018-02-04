@@ -14,7 +14,7 @@ def get_bills():
 
 @app.route('/')
 def home():
-    return render_template('home/index.html')
+    return render_template('home/index.html', bills=get_bills())
 
 
 if __name__ == '__main__':

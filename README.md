@@ -3,9 +3,11 @@
 ### Installation
 
 ```sh
+# not required but recommended to do inside a virtual environment
 python3 -m venv venv
 source venv/bin/activate
-pip install --requirement requirements.txt
+# install all project dependencies
+make install
 ```
 
 ### Tests
